@@ -54,16 +54,15 @@ function hello_elementor_child_enqueue_scripts() {
 	wp_enqueue_script( 'sparrow-ajax-categories' );
 
     wp_register_script( 'sparrow-products-loadmore', get_stylesheet_directory_uri(  ) . "/assets/js/sparrow-products-loadmore.js", ['jquery'] );
-	wp_localize_script( 'sparrow-products-loadmore', 'ajax_loadmore', [
-		'ajaxurl' => admin_url( "admin-ajax.php" )
-	] );
-	wp_enqueue_script( 'sparrow-products-loadmore' );
+        wp_localize_script( 'sparrow-products-loadmore', 'ajax_loadmore', [
+                'ajaxurl' => admin_url( "admin-ajax.php" )
+        ] );
+        wp_enqueue_script( 'sparrow-products-loadmore' );
 
+*/
 
 }
 add_action( 'wp_enqueue_scripts', 'hello_elementor_child_enqueue_scripts' );
-
-*/
 
 
 // Reorder parent css
